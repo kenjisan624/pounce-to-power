@@ -1,5 +1,3 @@
-
-
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
@@ -14,12 +12,14 @@ const backgroundLevel1 = new Sprite({
     x:0,
     y:0
   }, 
-  imageSrc:'./img/CandyMap3.0.png'
+  imageSrc:'./img/CandyMap3.0.png',
 });
 
-
-
-const player = new Player();
+const player = new Player({
+  imageSrc:'./img/Catty/Idle.png',
+  frameRate: 6,
+}
+);
 
 //we want to make sure that we move in the direction of which key is pressed down,so this is a fix for that 
 const keys = {

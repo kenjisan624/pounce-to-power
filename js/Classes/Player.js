@@ -1,6 +1,7 @@
-class Player {
+class Player extends Sprite {
   //constructor contains all the variable that that players has like position, width,etc.
-  constructor(){
+  constructor( {imageSrc, frameRate} ) {
+    super({ imageSrc, frameRate });
     this.position = {
       x:100,
       y:100
@@ -23,12 +24,17 @@ class Player {
 
 
   //below here are all the methods that the Player object will have 
-  draw(){
-    c.fillStyle='red';
-    c.fillRect(this.position.x,this.position.y,this.width,this.height);
-  }
+//draw(){
+  //c.fillStyle = 'green'
+  //c.fillRect(this.position.x, this.position.y, this.width, this.height)
+    //}
 
   update(){
+
+  // this is the blue reference bottom 
+    //c.fillStyle = 'rgba(0, 0, 255, 0.5)'
+    //c.fillRect(this.position.x, this.position.y, this.width, 
+      //this.height)
 
     this.position.x+= this.velocity.x;
 
